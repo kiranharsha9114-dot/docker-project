@@ -10,7 +10,7 @@
 
   <script>
     async function getData() {
-      const res = await fetch("http://localhost:5000");
+      const res = await fetch("http://<EC2-PUBLIC-IP>:5000");
       const data = await res.text();
       document.getElementById("output").innerText = data;
     }
