@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker App</title>
+</head>
+<body>
+  <h1>Docker Full Stack App</h1>
+  <button onclick="getData()">Get Data</button>
+  <p id="output"></p>
+
+  <script>
+    async function getData() {
+      const res = await fetch("http://localhost:5000");
+      const data = await res.text();
+      document.getElementById("output").innerText = data;
+    }
+  </script>
+</body>
+</html>
